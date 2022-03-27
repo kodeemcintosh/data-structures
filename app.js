@@ -2,7 +2,7 @@ const { Array } = require('./ds/linear/array');
 const { MultidimensionalArray } = require('./ds/linear/multidimensional-array');
 const { LinkedList } = require('./ds/linear/linked-list');
 const { DllNode, DoublyLinkedList } = require('./ds/linear/doubly-linked-list');
-const { Set } = require('./ds/non-linear/set');
+const { SetRelations } = require('./ds/non-linear/set');
 const { Stack } = require('./ds/linear/stack');
 const { Queue } = require('./ds/linear/queue');
 const { HashMap } = require('./ds/non-linear/hashmap');
@@ -99,7 +99,9 @@ switch(process.env.DS) {
 
 
   case 'SET':
-    const set = new Set();
+    const setA = [1, 2, 3, 5, 7, 11, 13, 17, 23, 27, 29, 31, 37];
+    const setB = [2, 7, 9];
+    const set = new SetRelations(setA, setB);
 
     set.print();
     break;
@@ -149,6 +151,13 @@ switch(process.env.DS) {
     break;
 
 
+  case 'TREE':
+    const tree = new Tree();
+
+    tree.print();
+    break;
+
+
   case 'BINARY_TREE':
     const bt = new BinaryTree();
 
@@ -160,13 +169,6 @@ switch(process.env.DS) {
     const trie = new Trie();
 
     trie.print();
-    break;
-
-
-  case 'TREE':
-    const tree = new Tree();
-
-    tree.print();
     break;
 
 
@@ -217,6 +219,8 @@ switch(process.env.DS) {
 
     lru.print();
     break;
+
+
 
   default:
     console.log('DATA STRUCTURES!!!!!!!!!');

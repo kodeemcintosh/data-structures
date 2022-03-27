@@ -1,2 +1,2 @@
-# DataStructures
-Repo for storing my data structures implementations
+# data-structures
+### Node.js implementations of common (and some not-so-common) data structures

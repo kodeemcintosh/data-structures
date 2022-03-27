@@ -7,9 +7,16 @@ class Array {
     this.array = items;
   }
 
+  push(item) {
+    this.array.push(item);
+  }
+
+  pop() {
+    return this.array.pop();
+  }
+
   print() {
     console.log({ array: this.array });
-
   }
 }
 
