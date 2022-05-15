@@ -1,7 +1,24 @@
 
+class TreeNode {
+  children;
+
+  constructor(children) {
+    this.children = children;
+  }
+}
+
 class Tree {
-  print() {}
+  head;
+
+  // TODO: Figure out k-ary tree traversal operations
+  // preorder() {}
+  // inorder() {}
+  // postorder() {}
+
+  print() {
+    console.log({ tree: this.head })
+  }
 }
 
 
-module.exports = { Tree };
+module.exports = { TreeNode, Tree };

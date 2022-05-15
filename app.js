@@ -7,13 +7,13 @@ const { Stack } = require('./ds/linear/stack');
 const { Queue } = require('./ds/linear/queue');
 const { HashMap } = require('./ds/non-linear/hashmap');
 const { AvlBst } = require('./ds/non-linear/avl_binary-search-tree');
-const { BinaryTree } = require('./ds/non-linear/binary-tree');
+const { BinarySearchTree } = require('./ds/non-linear/binary-search-tree');
 const { Graph } = require('./ds/non-linear/graph');
 const { LruCache } = require('./ds/non-linear/lru-cache');
 const { PriorityQueue } = require('./ds/non-linear/priority-queue');
 const { RedBlackBst } = require('./ds/non-linear/redblack_binary-search-tree');
 const { SkipList } = require('./ds/non-linear/skip-list');
-const { Tree } = require('./ds/non-linear/tree');
+const { TreeNode, Tree } = require('./ds/non-linear/tree');
 const { Trie } = require('./ds/non-linear/trie');
 const { UnionFind } = require('./ds/non-linear/union-find');
 
@@ -152,14 +152,27 @@ switch(process.env.DS) {
 
 
   case 'TREE':
-    const tree = new Tree();
+    const t = new Tree();
+    t.head = new TreeNode([
+      new TreeNode([
+        new TreeNode([
+          new TreeNode(),
+          new TreeNode()
+        ]),
+        new TreeNode(),
+        new TreeNode()
+      ]),
+      new TreeNode([
+        new TreeNode()
+      ])
+    ]);
 
-    tree.print();
+    t.print();
     break;
 
 
-  case 'BINARY_TREE':
-    const bt = new BinaryTree();
+  case 'BINARY_SEARCH_TREE':
+    const bt = new BinarySearchTree();
 
     bt.print();
     break;

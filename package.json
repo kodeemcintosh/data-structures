@@ -16,7 +16,7 @@
     "queue": "DS=QUEUE node app.js",
     "tree": "DS=TREE node app.js",
     "trie": "DS=TRIE node app.js",
-    "binary-tree": "DS=BINARY_TREE node app.js",
+    "binary-search-tree": "DS=BINARY_SEARCH_TREE node app.js",
     "skip-list": "DS=SKIP_LIST node app.js",
     "graph": "DS=GRAPH node app.js",
     "bst-avl": "DS=BST_AVL node app.js",
