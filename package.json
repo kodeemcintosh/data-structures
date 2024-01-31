@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "Node.js implementation of different data structures",
   "repository": "https://github.com/kodeemcintosh/DataStructures.git",
-  "author": "Kodee McIntosh <kodee.mcintosh@gmail.com>",
+  "author": "Kodee McIntosh <dev@kodee.xyz>",
   "main": "app.js",
   "scripts": {
     "array": "DS=ARRAY node app.js",

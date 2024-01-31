@@ -9,7 +9,7 @@ const { HashMap } = require('./ds/non-linear/hashmap');
 const { AvlBst } = require('./ds/non-linear/avl_binary-search-tree');
 const { BinarySearchTree } = require('./ds/non-linear/binary-search-tree');
 const { Graph } = require('./ds/non-linear/graph');
-const { LruCache } = require('./ds/non-linear/lru-cache');
+const { LRUCache } = require('./ds/non-linear/lru-cache');
 const { PriorityQueue } = require('./ds/non-linear/priority-queue');
 const { RedBlackBst } = require('./ds/non-linear/redblack_binary-search-tree');
 const { SkipList } = require('./ds/non-linear/skip-list');
@@ -188,6 +188,13 @@ switch(process.env.DS) {
   case 'GRAPH':
     const g = new Graph();
 
+    g.addVertex('A');
+    g.addVertex('B');
+    g.addVertex('C');
+    g.addEdge('A', 'B');
+    g.addEdge('A', 'C');
+    g.addEdge('B', 'C');
+
     g.print();
     break;
 
@@ -228,7 +235,12 @@ switch(process.env.DS) {
 
 
   case 'LRU_CACHE':
-    const lru = new LruCache();
+    const lru = new LRUCache(2);
+
+    lru.put(1, 1);
+    lru.put(2, 2);
+    lru.put(3, 3);
+    lru.put(4, 4);
 
     lru.print();
     break;
