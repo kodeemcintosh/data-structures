@@ -228,9 +228,17 @@ switch(process.env.DS) {
 
 
   case 'SKIP_LIST':
-    const sl = new SkipList();
+    const sl = new SkipList(3);
+    l.insert(10);
+    l.insert(20);
+    l.insert(30);
 
-    sl.print();
+    console.log(l.search(20)); // true
+    console.log(l.search(40)); // false
+
+    list.delete(20);
+
+    console.log(list.search(20)); // false
     break;
 
 

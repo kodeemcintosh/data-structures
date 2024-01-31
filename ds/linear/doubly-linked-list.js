@@ -1,5 +1,5 @@
 
-// Linked-List implementation
+// doubly-linked List implementation
 
 class DllNode {
   data;
@@ -34,9 +34,31 @@ class DoublyLinkedList {
     current.next = node;
   }
 
-  shift() {}
-  unshift() {}
+  shift() {
+    if (!this.head) {
+      console.log('head node is empty')
+      return null;
+    }
 
+    const removedHead = this.head;
+    this.head = this.head.next;
+    if (this.head) {
+      this.head.prev = null;
+    }
+
+    return removedHead.data;
+  }
+
+  unshift(data) {
+    const newNode = new DllNode(data);
+    if (!this.head) {
+      this.head = newNode;
+    } else {
+      newNode.next = this.head;
+      this.head.prev = newNode;
+      this.head = newNode;
+    }
+  }
 
   // O(n)
   print() {
