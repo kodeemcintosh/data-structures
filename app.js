@@ -215,8 +215,13 @@ switch(process.env.DS) {
 
   case 'PRIORITY_QUEUE':
     const pq = new PriorityQueue();
+    pq.push("Person A", 2);
+    pq.push("Person B", 1);
+    pq.push("Person C", 1);
 
-    pq.print();
+    console.log(pq.print());
+    console.log(pq.pop());
+    console.log(pq.print());
     break;
 
 
